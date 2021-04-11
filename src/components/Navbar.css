@@ -160,4 +160,20 @@
         background-color: #1888ff;
         border-radius: 0;
       }
+      .nav-sub {
+        height: 0;
+        
+    }
+    
+
+      .nav-sub-scaleup {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.15s ease-out;
+        
+    }
+    .nav-sub-scaledown {
+        max-height: 160px;
+        transition: max-height 0.15s ease-in;
+    }
   }

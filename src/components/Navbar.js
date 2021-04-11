@@ -71,7 +71,7 @@ function Navbar() {
                          <Mobile>
 
                         <Link to ='/services' className='nav-links' onClick = {openService}>
-                            service <i className = 'fas fa-caret-down'/>
+                            service {open ? <i className = 'fas fa-caret-down'/>:<i className = 'fas fa-caret-up'/> }
                         </Link>
                        
                         </Mobile>
@@ -79,8 +79,9 @@ function Navbar() {
                         
                     </li>
                     <Mobile>
-                    {open && 
-                    <div>
+                    <div className={open ? "nav-sub-scaleup   ":" nav-sub-scaledown " }>
+                   
+                          
                                 <li className = 'nav-item'>
                                 <Link to ='/contact' className='nav-links-sub' onClick = {closeMobileMenu}>
                                   service1
@@ -91,10 +92,9 @@ function Navbar() {
                                       service2
                                  </Link>
                              </li>
-                    </div>
                             
-                            
-                        }
+                        
+                         </div> 
                     </Mobile>
                     <li className='nav-item'>
                         <Link to ='/contact' className='nav-links' onClick = {closeMobileMenu}>
